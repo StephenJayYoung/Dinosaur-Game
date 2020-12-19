@@ -46,6 +46,20 @@
 
     // Use IIFE to get human data from form
 
+    const button = document.getElementById("btn");
+    button.onclick = function(){
+        let nameValue = document.getElementById("name").value;
+        let heightFeet = document.getElementById("feet").value;
+        let heightInches = document.getElementById("inches").value;
+        let weight = document.getElementById("weight").value;
+        let diet = document.getElementById("diet").value;
+        console.log(`Name: ${nameValue}, feet: ${heightFeet}, inches: ${heightInches}, weight: ${weight} diet: ${diet}`);
+    };
+
+
+
+
+
 
     // Create Dino Compare Method 1
     // NOTE: Weight in JSON file is in lbs, height in inches. 
