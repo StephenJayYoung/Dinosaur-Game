@@ -1,6 +1,7 @@
 
     // Create Dino Constructor
     function dino(species, weight, height, diet, where, when, fact){
+        this.species = species;
         this.diet = diet;
         this.weight =  weight;
         this.height = height;
@@ -34,30 +35,29 @@
 
 
     // Create Human Object
-    function human(name, feet, inches, weight, lbs, diet, ){
+    function human(name, feet, inches, weight, diet, ){
         this.name = name;
         this.feet = feet;
         this.feet = inches;
         this.weight = weight;
-        this.lbs = lbs;
         this.diet = diet;
     }
 
 
     // Use IIFE to get human data from form
-
     const button = document.getElementById("btn");
     button.onclick = function(){
-        let nameValue = document.getElementById("name").value;
-        let heightFeet = document.getElementById("feet").value;
-        let heightInches = document.getElementById("inches").value;
+        let name = document.getElementById("name").value;
+        let feet = document.getElementById("feet").value;
+        let inches = document.getElementById("inches").value;
         let weight = document.getElementById("weight").value;
         let diet = document.getElementById("diet").value;
-        console.log(`Name: ${nameValue}, feet: ${heightFeet}, inches: ${heightInches}, weight: ${weight} diet: ${diet}`);
+        let yourself = new human(name, feet, inches, weight, diet);
+        console.log(yourself);
+
+        // append li's for each of these items to the human characteristics section
+
     };
-
-
-
 
 
 
